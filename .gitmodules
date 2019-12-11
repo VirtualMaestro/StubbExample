@@ -1,0 +1,3 @@
+[submodule "StubbExample/Assets/Libs/Stubb"]
+	path = StubbExample/Assets/Libs/Stubb
+	url = git@github.com:VirtualMaestro/StubbUnity.git
