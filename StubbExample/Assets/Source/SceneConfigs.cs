@@ -6,12 +6,17 @@ namespace Source
 {
     public static  class SceneConfigs
     {
+        public static readonly List<ILoadingSceneConfig> CameraSceneConfig;
         public static readonly List<ILoadingSceneConfig> OneSceneConfig;
         public static readonly List<ILoadingSceneConfig> TwoSceneConfig;
-        public static readonly List<ILoadingSceneConfig> BothScenesConfig;
+        public static readonly List<ILoadingSceneConfig> AllScenesConfig;
         
         static SceneConfigs()
         {
+            CameraSceneConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+                .Add("Camera", "Scenes")
+                .Build;
+            
             OneSceneConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
                 .Add("One", "Scenes", true, true)
                 .Build;
@@ -20,7 +25,8 @@ namespace Source
                 .Add("Two", "Scenes", true, true)
                 .Build;
             
-            BothScenesConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+            AllScenesConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+                .Add("Camera", "Scenes")
                 .Add("One", "Scenes")
                 .Add("Two", "Scenes", true, true)
                 .Build;

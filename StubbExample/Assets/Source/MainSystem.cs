@@ -10,6 +10,11 @@ namespace Source
         
         public void Run()
         {
+            if (Input.GetKeyUp(KeyCode.C))
+            {
+                _world.LoadScenes(SceneConfigs.CameraSceneConfig);
+            }
+
             if (Input.GetKeyUp(KeyCode.A))
             {
                 _world.LoadScenes(SceneConfigs.OneSceneConfig);
@@ -17,12 +22,12 @@ namespace Source
 
             if (Input.GetKeyUp(KeyCode.S))
             {
-                _world.LoadScenes(SceneConfigs.TwoSceneConfig, true);
+                _world.LoadScenes(SceneConfigs.TwoSceneConfig);
             }
 
             if (Input.GetKeyUp(KeyCode.Q))
             {
-                _world.LoadScenes(SceneConfigs.BothScenesConfig, true);
+                _world.LoadScenes(SceneConfigs.AllScenesConfig, true);
             }
 
             if (Input.GetKeyUp(KeyCode.R))
