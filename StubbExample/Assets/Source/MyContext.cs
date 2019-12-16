@@ -1,13 +1,15 @@
 ﻿using Leopotam.Ecs;
-using Source;
 using StubbUnity.Contexts;
 
-public class MyContext : UnityContext
+namespace Source
 {
-    protected override IEcsSystem InitUserSystems()
+    public class MyContext : UnityContext
     {
-        var initUserSystems = new EcsSystems(World, "My awesome systems");
-        initUserSystems.Add(new MainSystem());
-        return initUserSystems;
+        protected override IEcsSystem InitUserSystems()
+        {
+            var initUserSystems = new EcsSystems(World, "My awesome systems");
+            initUserSystems.Add(new MainSystem());
+            return initUserSystems;
+        }
     }
 }
