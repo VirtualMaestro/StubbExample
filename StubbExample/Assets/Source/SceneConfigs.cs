@@ -11,10 +11,10 @@ namespace Source
         public static readonly SceneName OneSceneName;
         public static readonly SceneName TwoSceneName;
         
-        public static readonly List<ILoadingSceneConfig> CameraSceneConfig;
-        public static readonly List<ILoadingSceneConfig> OneSceneConfig;
-        public static readonly List<ILoadingSceneConfig> TwoSceneConfig;
-        public static readonly List<ILoadingSceneConfig> AllScenesConfig;
+        public static readonly List<ILoadingSceneConfig> CameraSceneConfigs;
+        public static readonly List<ILoadingSceneConfig> OneSceneConfigs;
+        public static readonly List<ILoadingSceneConfig> TwoSceneConfigs;
+        public static readonly List<ILoadingSceneConfig> AllScenesConfigs;
         
         static SceneConfigs()
         {
@@ -22,22 +22,22 @@ namespace Source
             OneSceneName = new SceneName("One", "Scenes");
             TwoSceneName = new SceneName("Two", "Scenes");
             
-            CameraSceneConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+            CameraSceneConfigs = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+                .Add(CameraSceneName).IsActive()
+                .Build;
+            
+            OneSceneConfigs = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+                .Add(OneSceneName).IsActive().IsMain()
+                .Build;
+            
+            TwoSceneConfigs = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+                .Add(TwoSceneName).IsActive()
+                .Build;
+            
+            AllScenesConfigs = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
                 .Add(CameraSceneName)
-                .Build;
-            
-            OneSceneConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
-                .Add(OneSceneName, true, true)
-                .Build;
-            
-            TwoSceneConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
-                .Add(TwoSceneName, true, true)
-                .Build;
-            
-            AllScenesConfig = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
-                .Add(CameraSceneName)
-                .Add(OneSceneName)
-                .Add(TwoSceneName, true, true)
+                .Add(OneSceneConfigs[0]).IsMain(false)
+                .Add(TwoSceneName).IsMain()
                 .Build;
         }
     }

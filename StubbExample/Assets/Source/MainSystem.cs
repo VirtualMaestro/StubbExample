@@ -10,24 +10,24 @@ namespace Source
         
         public void Run()
         {
-            if (Input.GetKeyUp(KeyCode.C))
+            if (Input.GetKeyUp(KeyCode.Alpha1))
             {
-                _world.LoadScenes(SceneConfigs.CameraSceneConfig);
+                _world.LoadScenes(SceneConfigs.CameraSceneConfigs);
             }
 
-            if (Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKeyUp(KeyCode.Alpha2))
             {
-                _world.LoadScenes(SceneConfigs.OneSceneConfig);
+                _world.LoadScenes(SceneConfigs.OneSceneConfigs);
             }
 
-            if (Input.GetKeyUp(KeyCode.S))
+            if (Input.GetKeyUp(KeyCode.Alpha3))
             {
-                _world.LoadScenes(SceneConfigs.TwoSceneConfig);
+                _world.LoadScenes(SceneConfigs.TwoSceneConfigs);
             }
 
-            if (Input.GetKeyUp(KeyCode.Q))
+            if (Input.GetKeyUp(KeyCode.Alpha4))
             {
-                _world.LoadScenes(SceneConfigs.AllScenesConfig, true);
+                _world.LoadScenes(SceneConfigs.AllScenesConfigs, true);
             }
 
             if (Input.GetKeyUp(KeyCode.R))
