@@ -27,6 +27,11 @@ namespace Source
 
             if (Input.GetKeyUp(KeyCode.Alpha4))
             {
+                _world.LoadScenes(SceneConfigs.UISceneConfigs);
+            }
+
+            if (Input.GetKeyUp(KeyCode.Alpha5))
+            {
                 _world.LoadScenes(SceneConfigs.AllScenesConfigs, true);
             }
 

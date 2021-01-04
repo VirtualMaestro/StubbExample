@@ -1,4 +1,5 @@
 ﻿using Leopotam.Ecs;
+using Leopotam.Ecs.Ui.Systems;
 using StubbUnity.Contexts;
 
 namespace Source
@@ -7,9 +8,11 @@ namespace Source
     {
         protected override IEcsSystem InitUserSystems()
         {
-            var initUserSystems = new EcsSystems(World, "My awesome systems");
-            initUserSystems.Add(new MainSystem());
-            return initUserSystems;
+            var userSystems = new EcsSystems(World, "My awesome systems");
+            userSystems.Add(new MainSystem());
+            // userSystems.Add(new UIMenuFeature(World));
+            userSystems.InjectUi(GetComponent<EcsUiEmitter>());
+            return userSystems;
         }
     }
 }
