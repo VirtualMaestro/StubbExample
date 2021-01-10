@@ -1,5 +1,5 @@
 ﻿using Leopotam.Ecs;
-using StubbFramework.Extensions;
+using StubbUnity.StubbFramework.Extensions;
 using UnityEngine;
 
 namespace Source
@@ -27,7 +27,7 @@ namespace Source
 
             if (Input.GetKeyUp(KeyCode.Alpha4))
             {
-                _world.LoadScenes(SceneConfigs.UISceneConfigs);
+                _world.LoadScenes(SceneConfigs.MenuSceneConfigs);
             }
 
             if (Input.GetKeyUp(KeyCode.Alpha5))
