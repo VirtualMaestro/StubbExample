@@ -12,6 +12,10 @@ namespace Source.UI
         
         public UIMenuFeature(EcsWorld world, string name = "UI", bool isEnable = false) : base(world, name, isEnable)
         {
+        }
+
+        protected override void SetupSystems()
+        {
             Add(new UIClickEventsHandlerSystem());
             Add(new UISlideEventsHandlerSystem());
         }
