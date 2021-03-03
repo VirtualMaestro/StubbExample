@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Source
 {
-    public class MainSystem : IEcsRunSystem
+    public class ScenesManagerSystem : IEcsRunSystem
     {
         private EcsWorld _world;
         

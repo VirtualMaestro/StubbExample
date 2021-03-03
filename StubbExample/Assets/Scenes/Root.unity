@@ -133,9 +133,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144321961}
-  - component: {fileID: 144321960}
-  - component: {fileID: 144321962}
   - component: {fileID: 144321963}
+  - component: {fileID: 144321960}
   m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
@@ -152,9 +151,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 144321959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae5d7dda800b144786fdf58dde6c933, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c6b7bc0db4f47f099bb4d283e9e0f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  injectUi: 0
 --- !u!4 &144321961
 Transform:
   m_ObjectHideFlags: 0
@@ -169,18 +169,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &144321962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144321959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a96cd40d6225d746a3e5b6bf448a3ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &144321963
 MonoBehaviour:
   m_ObjectHideFlags: 0

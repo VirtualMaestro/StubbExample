@@ -1,5 +1,5 @@
 ﻿using Leopotam.Ecs;
-using StubbUnity.StubbFramework;
+using StubbUnity.StubbFramework.Core;
 using StubbUnity.StubbFramework.Scenes.Components;
 using UnityEngine;
 
@@ -10,11 +10,7 @@ namespace Source.UI
         private readonly EcsFilter<SceneComponent, IsSceneActiveComponent, SceneChangedStateComponent> _sceneActivatedFilter = null;
         private readonly EcsFilter<SceneComponent, IsSceneInactiveComponent, SceneChangedStateComponent> _sceneDeactivatedFilter = null;
         
-        public UIMenuFeature(EcsWorld world, string name = "UI", bool isEnable = false) : base(world, name, isEnable)
-        {
-        }
-
-        protected override void SetupSystems()
+        public UIMenuFeature() : base(false)
         {
             Add(new UIClickEventsHandlerSystem());
             Add(new UISlideEventsHandlerSystem());
