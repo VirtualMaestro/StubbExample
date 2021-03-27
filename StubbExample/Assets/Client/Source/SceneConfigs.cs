@@ -6,6 +6,8 @@ namespace Client.Source
 {
     public static class SceneConfigs
     {
+        private const string ScenePath = "Client/Scenes";
+        
         public static readonly SceneName CameraSceneName;
         public static readonly SceneName OneSceneName;
         public static readonly SceneName TwoSceneName;
@@ -19,10 +21,10 @@ namespace Client.Source
 
         static SceneConfigs()
         {
-            CameraSceneName = new SceneName("Camera", "Scenes");
-            OneSceneName = new SceneName("One", "Scenes");
-            TwoSceneName = new SceneName("Two", "Scenes");
-            MenuSceneName = new SceneName("Menu", "Scenes");
+            CameraSceneName = new SceneName("Camera", ScenePath);
+            OneSceneName = new SceneName("One", ScenePath);
+            TwoSceneName = new SceneName("Two", ScenePath);
+            MenuSceneName = new SceneName("Menu", ScenePath);
 
             CameraSceneConfigs = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
                 .Add(CameraSceneName).IsActive()
