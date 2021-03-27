@@ -1,7 +1,7 @@
-﻿using Source.UI;
+﻿using Client.Source.UI;
 using StubbUnity.StubbFramework.Core;
 
-namespace Source
+namespace Client.Source
 {
     public class MainFeature : EcsFeature
     {

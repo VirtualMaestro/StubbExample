@@ -3,7 +3,7 @@ using StubbUnity.StubbFramework.Core;
 using StubbUnity.StubbFramework.Scenes.Components;
 using UnityEngine;
 
-namespace Source.UI
+namespace Client.Source.UI
 {
     public class UIMenuFeature : EcsFeature, IEcsRunSystem
     {

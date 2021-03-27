@@ -1,7 +1,7 @@
 ﻿using StubbUnity.StubbFramework.Core;
 using StubbUnity.Unity;
 
-namespace Source
+namespace Client.Source
 {
     public class AppEntry : EntryPoint
     {

@@ -2,7 +2,7 @@
 using Leopotam.Ecs.Ui.Components;
 using UnityEngine;
 
-namespace Source.UI
+namespace Client.Source.UI
 {
     public sealed class UIClickEventsHandlerSystem : IEcsRunSystem
     {

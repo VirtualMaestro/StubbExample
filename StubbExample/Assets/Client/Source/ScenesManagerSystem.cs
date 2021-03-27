@@ -2,7 +2,7 @@
 using StubbUnity.StubbFramework.Extensions;
 using UnityEngine;
 
-namespace Source
+namespace Client.Source
 {
     public class ScenesManagerSystem : IEcsRunSystem
     {

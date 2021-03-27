@@ -2,7 +2,7 @@
 using StubbUnity.StubbFramework.Scenes.Configurations;
 using StubbUnity.Unity.Scenes;
 
-namespace Source
+namespace Client.Source
 {
     public static class SceneConfigs
     {
