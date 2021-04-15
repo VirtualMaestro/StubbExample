@@ -1,13 +1,14 @@
 ﻿using Leopotam.Ecs;
 using StubbUnity.StubbFramework.Extensions;
+using StubbUnity.Unity.Scenes;
 using UnityEngine;
 
-namespace Client.Source
+namespace Client.Source.Systems
 {
     public class ScenesManagerSystem : IEcsRunSystem
     {
         private EcsWorld _world;
-        
+
         public void Run()
         {
             if (Input.GetKeyUp(KeyCode.Alpha1))
@@ -32,7 +33,28 @@ namespace Client.Source
 
             if (Input.GetKeyUp(KeyCode.Alpha5))
             {
-                _world.LoadScenes(SceneConfigs.AllScenesConfigs, true);
+                _world.LoadScenes(SceneConfigs.AllScenesConfigs, true, "AllScenesConfigs");
+            }
+
+            if (Input.GetKeyUp(KeyCode.Alpha6))
+            {
+                var unloadScenes = SceneName.Create
+                    .Add(SceneConfigs.MenuSceneName)
+                    .Build;
+                
+                _world.LoadScenes(SceneConfigs.ThreeScenesConfigs, unloadScenes, "ThreeScenesConfigs");
+            }
+
+            if (Input.GetKeyUp(KeyCode.Alpha7))
+            {
+                _world.LoadScenes(SceneConfigs.AllScenesConfigs, true, "AllScenesConfigs");
+
+                var unloadScenes = SceneName.Create
+                    .Add(SceneConfigs.CameraSceneName)
+                    .Add(SceneConfigs.MenuSceneName)
+                    .Build;
+                
+                _world.LoadScenes(SceneConfigs.ThreeScenesConfigs, unloadScenes, "ThreeScenesConfigs");
             }
 
             if (Input.GetKeyUp(KeyCode.R))

@@ -5,9 +5,9 @@ namespace Client.Source
 {
     public class AppEntry : EntryPoint
     {
-        protected override void SetupFeatures(IStubbContext context)
+        protected override void Construct(IStubbContext context)
         {
-            base.SetupFeatures(context);
+            base.Construct(context);
             context.MainFeature = new MainFeature();
         }
     }

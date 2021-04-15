@@ -18,6 +18,7 @@ namespace Client.Source
         public static readonly List<ILoadingSceneConfig> TwoSceneConfigs;
         public static readonly List<ILoadingSceneConfig> MenuSceneConfigs;
         public static readonly List<ILoadingSceneConfig> AllScenesConfigs;
+        public static readonly List<ILoadingSceneConfig> ThreeScenesConfigs;
 
         static SceneConfigs()
         {
@@ -47,6 +48,11 @@ namespace Client.Source
                 .Add(OneSceneConfigs[0]).IsMain(false)
                 .Add(TwoSceneName).IsActive().IsMain().IsMultiple()
                 .Add(MenuSceneName)
+                .Build;
+
+            ThreeScenesConfigs = SceneConfigsBuilder<LoadingSceneConfig, SceneName>.Create
+                .Add(OneSceneConfigs[0]).IsMain(false)
+                .Add(TwoSceneName).IsActive().IsMain().IsMultiple()
                 .Build;
         }
     }
