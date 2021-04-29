@@ -18,12 +18,12 @@ namespace Client.Source.Systems
 
             if (Input.GetKeyUp(KeyCode.Alpha2))
             {
-                _world.LoadScenes(SceneConfigs.OneSceneConfigs);
+                _world.LoadScenes(SceneConfigs.CylinderSceneConfigs);
             }
 
             if (Input.GetKeyUp(KeyCode.Alpha3))
             {
-                _world.LoadScenes(SceneConfigs.TwoSceneConfigs);
+                _world.LoadScenes(SceneConfigs.SphereSceneConfigs);
             }
 
             if (Input.GetKeyUp(KeyCode.Alpha4))
@@ -55,6 +55,11 @@ namespace Client.Source.Systems
                     .Build;
                 
                 _world.LoadScenes(SceneConfigs.ThreeScenesConfigs, unloadScenes, "ThreeScenesConfigs");
+            }
+            
+            if (Input.GetKeyUp(KeyCode.Alpha8))
+            {
+                _world.LoadScenes(SceneConfigs.PhysicsScenesConfigs, true, "PhysicsScenesConfigs");
             }
 
             if (Input.GetKeyUp(KeyCode.R))
