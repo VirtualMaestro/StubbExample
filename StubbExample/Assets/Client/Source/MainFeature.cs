@@ -2,12 +2,10 @@
 using Client.Source.UI;
 using Leopotam.Ecs;
 using StubbUnity.StubbFramework.Core;
-using StubbUnity.StubbFramework.Extensions;
-using StubbUnity.Unity.Scenes;
 
 namespace Client.Source
 {
-    public class MainFeature : EcsFeature, IEcsInitSystem
+    public class MainFeature : EcsFeature
     {
         private EcsWorld _world;
 
@@ -17,11 +15,6 @@ namespace Client.Source
             Add(new ApplicationChangeStateSystem());
             Add(new ScenesHandlerSystem());
             Add(new UIMenuFeature());
-        }
-
-        public void Init()
-        {
-            // _world.LoadScenes(SceneConfigs.CameraSceneConfigs, true);
         }
     }
 }

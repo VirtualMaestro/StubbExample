@@ -18,8 +18,6 @@ namespace Client.Source.Physics
             log.Warn($"ObjectA Name: {collisionEnterComponent.ObjectA.Name}, TypeId: {collisionEnterComponent.ObjectA.TypeId}");
             log.Warn($"ObjectB Name: {collisionEnterComponent.ObjectB.Name}, TypeId: {collisionEnterComponent.ObjectB.TypeId}");
             log.Warn($"Info: {collisionEnterComponent.Info}");
-            
-            // _world.T
         }
     }
 }
